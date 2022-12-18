@@ -1,0 +1,99 @@
+using System;
+
+namespace Discrete
+{
+	public static class Program
+	{
+		public static void Main()
+		{
+
+			Console.WriteLine("### Project 1 ###");
+			Console.WriteLine();
+
+			//num1 is the first input number
+			//num2 is the second input number
+			int num1, num2, i, j;
+
+			Console.WriteLine("Enter the first number, please");
+			num1 = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("Enter the second number, please");
+			num2 = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("---*---*---*---*---*---*---*---*");
+
+			Console.WriteLine("The prime numbers are:");
+
+			//i represent the numbers from the first number to the second number by adding 1 each time.
+			for (i = num1; i <= num2; i++)
+			{
+				//j represents the numbers that will be divided on
+				for (j = 2; j <= i; j++)
+				{
+
+					if (i % j == 0)
+					{
+						break;
+
+					}
+
+				}
+
+				if (i == j)
+					Console.WriteLine(j);
+
+
+			}
+
+
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine("### Project 2 ###");
+			Console.WriteLine();
+
+			//n1 is the first input number
+			//n2 is the second input number
+			int n1, n2, sum, ii, jj;
+
+			Console.WriteLine("Enter the first number, please");
+			n1 = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("Enter the second number, please");
+			n2 = int.Parse(Console.ReadLine());
+
+			Console.WriteLine("---*---*---*---*---*---*---*---*");
+
+			Console.WriteLine("The perfect numbers are:");
+
+			//ii represents the numbers from n1 to n2 by increasing 1 each time
+			for (ii = n1; ii <= n2; ii++)
+			{
+
+				sum = 0;
+
+				//jj represents the numbers from 1 to ii by adding 1 each time
+				for (jj = 1; jj < ii; jj++)
+				{
+
+					if (ii % jj == 0)
+					{
+						sum = sum + jj;
+
+					}
+
+				}
+
+				if (ii == sum)
+					Console.WriteLine(ii);
+
+
+
+			}
+
+
+
+		}
+
+	}
+}
